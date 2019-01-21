@@ -1,6 +1,6 @@
 package Model;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class FichaAvaliacao {
@@ -9,16 +9,23 @@ public class FichaAvaliacao {
     private int idade;
     private String sexo;
     private String diagnostico;
-    private String dataConsulta;
+    private LocalDate dataConsulta;
 
 
-    public FichaAvaliacao(String nome, String cpf, int idade, String sexo, String diagnostico, String dataConsulta) {
+    public FichaAvaliacao() {
+    }
+
+    public FichaAvaliacao(String nome, String cpf, int idade, String sexo, String diagnostico, LocalDate dataConsulta) {
         this.nome = nome;
         this.cpf = cpf;
         this.idade = idade;
         this.sexo = sexo;
         this.diagnostico = diagnostico;
         this.dataConsulta = dataConsulta;
+    }
+
+
+    public FichaAvaliacao(String nome, String cpf, String idade, String sexo, String diagnostico, String dataConsulta) {
     }
 
     public String getNome() {
@@ -61,11 +68,11 @@ public class FichaAvaliacao {
         this.diagnostico = diagnostico;
     }
 
-    public String getData() {
+    public LocalDate getData() {
         return dataConsulta;
     }
 
-    public void setData(String data) {
+    public void setData(LocalDate data) {
         this.dataConsulta = dataConsulta;
     }
 
@@ -84,6 +91,6 @@ public class FichaAvaliacao {
 
     @Override
     public String toString() {
-        return "FichaAvaliacao[ Nome: " + nome + " Sexo: " + sexo + "Diagnostico Clinico: " + diagnostico;
+        return "FichaAvaliacao[ Nome: " + nome + " Sexo: " + sexo + " Diagnostico Clinico: " + diagnostico +" ]";
     }
 }
