@@ -1,8 +1,0 @@
-create table FichaAvaliacao(
-    nome varchar(50) not null,
-    cpf varchar(12) not null primary key,
-    idade int not null,
-    sexo varchar(10),
-    diagnostico varchar (200) not null,
-    dataConsulta varchar(10) not null
-);
